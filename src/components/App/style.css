@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-const Title = styled.div`
+.title {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -8,15 +6,14 @@ const Title = styled.div`
   margin: auto;
   margin-top: 30px;
   color: #8600b3;
-  & svg {
-    cursor: pointer;
-  }
-`;
+}
 
-const CardContainer = styled.div`
+.title svg {
+  cursor: pointer;
+}
+
+.card-container {
   margin: 35px auto;
   overflow-y: auto;
   max-width: 500px;
-`;
-
-export { Title, CardContainer };
+}

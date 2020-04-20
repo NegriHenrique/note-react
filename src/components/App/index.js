@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 
 import Card from "../Note";
-
-import { Title, CardContainer } from "./style";
+import "./style.css";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -43,12 +42,12 @@ function App() {
 
   return (
     <div className="App">
-      <Title>
+      <div className="title">
         <h1>Notas</h1>
         <FaPlusSquare onClick={() => addNote()} size={20} />
-      </Title>
+      </div>
 
-      <CardContainer>
+      <div className="card-container">
         {notes.length > 0 ? (
           notes.map((note, index) => (
             <Card
@@ -66,7 +65,7 @@ function App() {
             deleteNote={deleteNote}
           />
         )}
-      </CardContainer>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-const Container = styled.div`
+.container {
   width: 500px;
   background: #fff;
   border-radius: 4px;
@@ -9,30 +7,28 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
-`;
+}
 
-const Header = styled.header`
+.header {
   display: flex;
   justify-content: flex-end;
   padding: 5px 15px;
   background: #90909078;
+}
 
-  & svg {
-    margin-left: 10px;
-    cursor: pointer;
-  }
-`;
+.header svg {
+  margin-left: 10px;
+  cursor: pointer;
+}
 
-const Content = styled.div`
+.content {
   padding: 15px;
   flex: 1;
   display: flex;
   flex-direction: column;
+}
 
-  & div {
-    flex: 1;
-    outline: none;
-  }
-`;
-
-export { Container, Header, Content };
+.content div {
+  flex: 1;
+  outline: none;
+}

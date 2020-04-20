@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-import { Container, Header, Content } from "./style";
 import { FaCheck, FaPencilAlt, FaTrashAlt } from "react-icons/fa";
 import ContentEditable from "react-contenteditable";
+
+import "./style.css";
 
 export default function Note({ note, noteIndex, saveNote, deleteNote }) {
   const [edit, setEdit] = useState(false);
@@ -15,8 +16,8 @@ export default function Note({ note, noteIndex, saveNote, deleteNote }) {
   }
 
   return (
-    <Container>
-      <Header>
+    <div className="container">
+      <header className="header">
         {edit ? (
           <FaCheck onClick={() => handleSave()} color="#29a329" size={16} />
         ) : (
@@ -31,9 +32,9 @@ export default function Note({ note, noteIndex, saveNote, deleteNote }) {
           color="#ff886b"
           size={16}
         />
-      </Header>
+      </header>
 
-      <Content>
+      <div className="content">
         {edit ? (
           <ContentEditable
             html={finalyNote}
@@ -43,7 +44,7 @@ export default function Note({ note, noteIndex, saveNote, deleteNote }) {
         ) : (
           <ReactMarkdown source={finalyNote} escapeHtml={false} />
         )}
-      </Content>
-    </Container>
+      </div>
+    </div>
   );
 }
